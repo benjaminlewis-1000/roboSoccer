@@ -7,11 +7,11 @@ def p_controller(s_command1, s_command2, s_command3, rps_d1, rps_d2, rps_d3, k1,
 	import param_vars
 	from time import sleep
 	
-	try:
-		ser_80 = serial.Serial(param_vars.port_80, param_vars.baud_rate)
-	except:
-		print "The serial port " + param_vars.port_80 + " is not available."
-		sys.exit(param_vars.e_code)
+#	try:
+#		ser_80 = serial.Serial(param_vars.port_80, param_vars.baud_rate)
+#	except:
+#		print "The serial port " + param_vars.port_80 + " is not available."
+#		sys.exit(param_vars.e_code)
 	try:
 		ser_81 = serial.Serial(param_vars.port_81, param_vars.baud_rate)
 	except:

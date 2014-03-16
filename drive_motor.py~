@@ -11,8 +11,9 @@ def run_drive(board_num, motor, speed):
 	import serial
 	import param_vars
 	# Command arguments: Board number (0x80, 0x81...), motor number (0 or 1) and speed(2's complement signed integer)
-
+	print board_num
 	if (int(board_num,0) == 0x80):
+		print "Sanity check"
 		try: 
 			ser = serial.Serial(param_vars.port_80, param_vars.baud_rate)
 		except:

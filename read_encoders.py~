@@ -54,6 +54,7 @@ def run_enc(board_num, motor):
 	for i in range(6):
 		data.append(ser.read())
 
+	print "reading data"
 	for i in range(len(data)):
 		print ord(data[i])
 

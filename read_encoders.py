@@ -14,11 +14,19 @@ def run_enc(board_num, motor):
 	motor_max = 1 # These are the two acceptable values for motor enumerated values. 
 	e_code = -999 # Error code
 
-	try:
-		ser = serial.Serial(param_vars.port, param_vars.baud_rate)
-	except:
-		print "The serial port " + param_vars.port + "is not available."
-		sys.exit(e_code)
+	if (int(board_num,0) == 0x80):
+		try:
+			ser = serial.Serial(param_vars.port_80, param_vars.baud_rate)
+		except:
+			print "The serial port " + param_vars.port_80 + "is not available."
+			sys.exit(e_code)
+	else:
+		print "I'm in x81"
+		try:
+			ser = serial.Serial(param_vars.port_81, param_vars.baud_rate)
+		except:
+			print "The serial port " + param_vars.port_81 + " is not avaliable."
+			sys.exit(e_code)
 
 	try:
 		board_num = int(board_num, 0) 

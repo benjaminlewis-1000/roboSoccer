@@ -8,4 +8,4 @@ e_code = 1 # Error code
 
 port_80 = '/dev/ttyPCH1'
 port_81 = '/dev/ttyPCH2'
-baud_rate = 19200
+baud_rate =  38400

@@ -6,8 +6,7 @@ s = xmlrpclib.ServerProxy('http://localhost:8000')
 #s.echo()
 
 # Print list of available methods
-print s.system.listMethods()
 
 ## Spin
-
-s.square(2)
+#s.p_control(30000, 30000, 30000, 1, 1, 1, 300000, 30000, 30000)
+s.stop()

@@ -25,6 +25,12 @@ def rotate_one_sixth():
 	s = xmlrpclib.ServerProxy('http://localhost:8000')
 	s.rotate_one_sixth()
 	
+def rotate_one_sixth_dir(direction):
+	import xmlrpclib
+	s = xmlrpclib.ServerProxy('http://localhost:8000')
+	s.rotate_one_sixth_dir(direction)
+	
+
 def rotate_degrees(degrees):
 	import xmlrpclib
 	s = xmlrpclib.ServerProxy('http://localhost:8000')

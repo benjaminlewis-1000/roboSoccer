@@ -285,7 +285,7 @@ server.register_function(square)
 ###################################
 
 def drive_forward(distance):  ## at 15 cm/sec
-	time = distance * 0.3048 / 0.15
+	time = distance / 0.15
 	time_passed = p_control(2*start_const, -1 * start_const, -1 *start_const, 1.14, -0.57, -0.57, k_const, k_const, k_const)
 	time.sleep(time - time_passed)
 	stop()
